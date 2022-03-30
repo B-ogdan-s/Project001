@@ -28,8 +28,8 @@ public class PlayerTransform : MonoBehaviour
             {
                 _cos *= -1;
             }
-            transform.eulerAngles = new Vector3(0f,_cos + 45f + _rotetCam.GetRotCam(),0f);
-            transform.Translate(Vector3.right * _playerInfo._speed * (radius / 250f) * Time.deltaTime);
+            transform.eulerAngles = new Vector3(0f,_cos - 45f + 180f + _rotetCam.GetRotCam(),0f);
+            transform.Translate(Vector3.forward * _playerInfo._speed * (radius / 250f) * Time.deltaTime);
         }
     }
 }
