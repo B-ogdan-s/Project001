@@ -4,14 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    [SerializeField] private ScriptableObjectPlayerInfo _playerInfo;
     [SerializeField] private MenuAnimation _menuAnimation;
     [SerializeField] private Canvas _canwas;
     [SerializeField] private Image _fon;
-    //[BoxGroup("Slider")]
-    //[SerializeField] private Slider _slider;
+    [BoxGroup("Slider")]
+    [SerializeField] private Slider _slider;
     [BoxGroup("Slider")]
     [SerializeField] private Image _fonSlider;
     [BoxGroup("Slider")]
@@ -42,5 +44,18 @@ public class StartGame : MonoBehaviour
         _fon.DOFade(1, _time);
         _fonSlider.DOFade(0.5f, _time);
         _fillSlider.DOFade(1, _time);
+
+        SceneManager.LoadScene(_playerInfo._numScene);
+        StartCoroutine(CR_StartScene());
+    }
+
+    private IEnumerator CR_StartScene()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(_playerInfo._numScene);
+        while(!asyncOperation.isDone)
+        {
+            _slider.value = asyncOperation.progress;
+            yield return null;
+        }
     }
 }
