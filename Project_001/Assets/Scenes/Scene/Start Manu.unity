@@ -348,9 +348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113950017a95e4a4fb52c3e6bfa6e9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerInfo: {fileID: 11400000, guid: b3206b42dec12d04590fa6c77e893ae9, type: 2}
   _menuAnimation: {fileID: 840250526}
   _canwas: {fileID: 1092079302}
   _fon: {fileID: 200426193}
+  _slider: {fileID: 0}
   _fonSlider: {fileID: 520240578}
   _fillSlider: {fileID: 1730622703}
   _time: 2
@@ -3075,7 +3077,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.3
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

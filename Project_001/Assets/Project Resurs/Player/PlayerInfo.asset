@@ -18,3 +18,4 @@ MonoBehaviour:
   _experience: 20
   _attack: 50
   _speed: 8
+  _numScene: 1
