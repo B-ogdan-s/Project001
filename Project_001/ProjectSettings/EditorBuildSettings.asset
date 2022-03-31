@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene/Start Manu.unity
     guid: d2866af9faef4ed498416036f25bcea2
+  - enabled: 1
+    path: Assets/Scenes/Forest/Forest(0;0).unity
+    guid: 73fe2c8ca8647dd44b014541a29e1f3e
   m_configObjects: {}

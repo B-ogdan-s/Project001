@@ -19,4 +19,6 @@ public class ScriptableObjectPlayerInfo : ScriptableObject
     public float _attack;
     [BoxGroup("Parameters")]
     public float _speed;
+
+    public int _numScene;
 }
