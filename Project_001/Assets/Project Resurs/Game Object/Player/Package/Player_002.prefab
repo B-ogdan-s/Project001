@@ -108,7 +108,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5798718229413232723}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _connrolerFon: {fileID: 0}
   _connroler: {fileID: 0}
-  _radiusStartTransform: 0
-  _playerInfo: {fileID: 0}
+  _radiusStartTransform: 15
+  _playerInfo: {fileID: 11400000, guid: b3206b42dec12d04590fa6c77e893ae9, type: 2}
   _rotetCam: {fileID: 0}
 --- !u!114 &8421912507088945406
 MonoBehaviour:
