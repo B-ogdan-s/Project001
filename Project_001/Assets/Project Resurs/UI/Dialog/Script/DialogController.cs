@@ -46,22 +46,21 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
     }
 
     public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log(_dialogeClick);
-        Debug.Log(_dialogGoing);
-         
+    {         
         if (_dialogeClick == false && _dialogGoing == false)
         {
-            Debug.Log("Seks");
             _dialogeClick = true;
             _dialogGoing = true;
-            _firstscriptableobject = _firstscriptableobject._nextDealog;
-            if (_firstscriptableobject == null)
+            if (_firstscriptableobject is ScriptableObjectDialog)
             {
-                _animationController.ClosePause();
-                return;
+                _firstscriptableobject = (ScriptableObjectDialog)_firstscriptableobject._nextDealog;
+                if (_firstscriptableobject == null)
+                {
+                    _animationController.ClosePause();
+                    return;
+                }
+                StartCoroutine(OnGoingText());
             }
-            StartCoroutine(OnGoingText());
         }
         
         else if (_dialogGoing == false)

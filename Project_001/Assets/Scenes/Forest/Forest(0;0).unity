@@ -4176,9 +4176,17 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1109252054, guid: 4aa6698b9090d6a468f481c83398caa5, type: 3}
+      propertyPath: m_Name
+      value: Dialog Panel
+      objectReference: {fileID: 0}
     - target: {fileID: 1200901993, guid: 4aa6698b9090d6a468f481c83398caa5, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968411566, guid: 4aa6698b9090d6a468f481c83398caa5, type: 3}
+      propertyPath: m_Name
+      value: Dialog Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 4130143010647414359, guid: 4aa6698b9090d6a468f481c83398caa5, type: 3}
       propertyPath: m_AnchorMax.y
