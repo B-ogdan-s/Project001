@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DialogController : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Text _text;
-    [SerializeField] private ScriptableObjectDealog _firstscriptableobject;
+    [SerializeField] private ScriptableObjectDialog _firstscriptableobject;
     [SerializeField] private float _time;
     [SerializeField] private VerticalPanelAnimationControler _animationController;
 
