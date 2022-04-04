@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObject/Dealog/Variant Dealog")]
 public class ScriptableObjectVariantDialog : AB_ScriptableObjectDialog
 {
+    public string[] _nameButton;
     public ScriptableObjectDialog[] _nextDealog;
 }
