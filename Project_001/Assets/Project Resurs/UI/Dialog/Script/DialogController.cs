@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class DialogController : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Text _text;
-    [SerializeField] private AB_ScriptableObjectDialog _dealog;
+    [SerializeField] private AB_ScriptableObjectDialog _dialog;
+    [SerializeField] private AB_ScriptableObjectDialog _startDialog;
     [SerializeField] private float _time;
     [SerializeField] private VerticalPanelAnimationControler _animationController;
 
@@ -27,14 +28,14 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
         _dialogGoing = false;
         _text.text = "";
 
-        for (int i = 0; i < _dealog._dealog.Length; i++)
+        for (int i = 0; i < _dialog._dealog.Length; i++)
         {
             if (!_dialogeClick)
             {
                 yield break;
             }
 
-            char c = _dealog._dealog[i];
+            char c = _dialog._dealog[i];
             _text.text += c;
             yield return new WaitForSeconds(_time);
         }
@@ -50,7 +51,7 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
 
     public void StartVariantDialog()
     {
-        if (_dealog == null)
+        if (_dialog == null)
         {
             _animationController.ClosePause();
             _text.text = "";
@@ -61,7 +62,8 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
    
     public void StartDialoge()
     {
-        if (_dealog == null)
+        _dialog = _startDialog;
+        if (_dialog == null)
         {
             return;
         }
@@ -75,11 +77,11 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
         {
             _dialogeClick = true;
             _dialogGoing = true;
-            if (_dealog is ScriptableObjectDialog)
+            if (_dialog is ScriptableObjectDialog)
             {
-                var a = (ScriptableObjectDialog)_dealog;
-                _dealog = a._nextDealog;
-                if (_dealog == null)
+                var a = (ScriptableObjectDialog)_dialog;
+                _dialog = a._nextDealog;
+                if (_dialog == null)
                 {
                     _animationController.ClosePause();
                     _text.text = "";
@@ -87,9 +89,9 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
                 }
                 StartCoroutine(OnGoingText());
             }
-            else if(_dealog is ScriptableObjectVariantDialog)
+            else if(_dialog is ScriptableObjectVariantDialog)
             {
-                var a = (ScriptableObjectVariantDialog)_dealog;
+                var a = (ScriptableObjectVariantDialog)_dialog;
                 a.OpenVariantDialogPanel();
                 _panelAnimation.Open();
                 enabled = false;
@@ -99,14 +101,14 @@ public class DialogController : MonoBehaviour, IPointerDownHandler
         else if (_dialogGoing == false)
         {
             _dialogeClick = false;
-            _text.text = _dealog._dealog;
+            _text.text = _dialog._dealog;
         }
     }
 
     public AB_ScriptableObjectDialog Dialog
     {
-        get { return _dealog; }
-        set { _dealog = value; }
+        get { return _dialog; }
+        set { _dialog = value; }
     }
 }
 

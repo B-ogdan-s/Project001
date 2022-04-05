@@ -3812,7 +3812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 2101074958}
-  _dealog: {fileID: 0}
+  _dialog: {fileID: 0}
+  _startDialog: {fileID: 0}
   _time: 0.06
   _animationController: {fileID: 1109252058}
 --- !u!1 &1980312853
