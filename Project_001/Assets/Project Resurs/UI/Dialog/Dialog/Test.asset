@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425c08d6a2ea56c4d889e71ff98393c2, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  _name: 
+  _dealog: Test
+  _colorName: {r: 0, g: 0, b: 0, a: 0}
+  _position: {fileID: 0}
+  _speaker: {fileID: 0}
+  _nameButton:
+  - 1
+  - 2
+  _nextDealog:
+  - {fileID: 11400000, guid: 1499c62b9561d4142820b07773070c78, type: 2}
+  - {fileID: 0}
+  _parents: {fileID: 0}
+  _button: {fileID: 6507160664022185382, guid: a72d0b6964dca204a90285ef30817de8, type: 3}
