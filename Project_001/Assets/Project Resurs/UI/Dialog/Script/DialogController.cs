@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DialogController : MonoBehaviour, IPointerDownHandler
+public  class DialogController : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Text _text;
     [SerializeField] private AB_ScriptableObjectDialog _dialog;
