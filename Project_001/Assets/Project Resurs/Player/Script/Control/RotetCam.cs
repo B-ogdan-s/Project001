@@ -17,9 +17,9 @@ public class RotetCam : MonoBehaviour
 
     private int[] _numCamMas = new int[0];
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.position = _player.transform.position;
+        transform.position = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
         if (_numCamMas.Length != 0 && _test == true)
         {
             RotCam();

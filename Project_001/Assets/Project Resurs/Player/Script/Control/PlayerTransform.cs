@@ -17,7 +17,7 @@ public class PlayerTransform : MonoBehaviour
 
     [SerializeField] private RotetCam _rotetCam;
 
-    private void Update()
+    private void FixedUpdate ()
     {
         float radius = Mathf.Sqrt(Mathf.Pow(_connroler.transform.localPosition.x,2) + Mathf.Pow(_connroler.transform.localPosition.y, 2));
         if (radius > _radiusStartTransform)
